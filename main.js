@@ -97,7 +97,7 @@ var pozice = 0;
 
 function next() {
   pozice++;
-  document["obr"].src = obrazky[pozice];
+  document["obr"].src = "img/" + obrazky[pozice];
   obnovaBunek();
   if (stav) {
     stav = false;
