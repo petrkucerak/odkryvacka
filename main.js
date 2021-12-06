@@ -1,13 +1,13 @@
 const anchors = document.getElementsByTagName("td");
 
 function prebarvi() {
-  for (var i = 0; i < anchors.length; i++) {
+  for (let i = 0; i < anchors.length; i++) {
     anchors[i].style.opacity = "1.0";
   }
 }
 
 function odhal() {
-  for (var i = 0; i < anchors.length; i++) {
+  for (let i = 0; i < anchors.length; i++) {
     anchors[i].style.opacity = "0.0";
   }
 }
