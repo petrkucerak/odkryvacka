@@ -64,7 +64,17 @@ const hrajici = [];
 window.onload = () => {
 
   obrazek.onerror = () => {
-    alert("Hra je u konce!")
+    switch (obrazek.src.split(".").at(-1)) {
+      case 'jpg':
+        obrazek.src = obrazek.src.replace(".jpg", ".jpeg");
+        break;
+      case 'jpeg':
+        obrazek.src = obrazek.src.replace(".jpeg", ".png");
+        break;
+      case 'png':
+        alert("Hra je u konce!");
+        break;
+    }
   };
 
   const tabulka = document.getElementById("tabulka");
