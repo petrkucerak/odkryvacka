@@ -62,6 +62,11 @@ class Tym {
 const hrajici = [];
 
 window.onload = () => {
+
+  obrazek.onerror = () => {
+    alert("Hra je u konce!")
+  };
+
   const tabulka = document.getElementById("tabulka");
   const trs = tabulka.getElementsByTagName("tr");
   for (let a = 0; a < trs.length; a++) {
