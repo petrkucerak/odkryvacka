@@ -12,7 +12,7 @@ function odhal() {
   }
 }
 
-var obrazky = [
+const obrazky = [
   "1.jpg",
   "2.jpg",
   "3.jpg",
@@ -108,35 +108,37 @@ function next() {
   }
 }
 
-function Tym(jmeno, i) {
-  this.name = jmeno;
-  this.body = 0;
-  this.id = i;
+class Tym {
+  constructor(jmeno, i) {
+    this.name = jmeno;
+    this.body = 0;
+    this.id = i;
 
-  this.pricti = function () {
-    this.body++;
-    document.getElementById(this.name).innerHTML = this.body;
-  };
+    this.pricti = function () {
+      this.body++;
+      document.getElementById(this.name).innerHTML = this.body;
+    };
 
-  this.odecti = function () {
-    this.body--;
-    document.getElementById(this.name).innerHTML = this.body;
-  };
+    this.odecti = function () {
+      this.body--;
+      document.getElementById(this.name).innerHTML = this.body;
+    };
 
-  this.vypis = function () {
-    document.getElementById("tymy").innerHTML +=
-      "<span class = jmeno>" +
-      this.name +
-      " : <span id=" +
-      this.name +
-      ">" +
-      this.body +
-      "</span></span><br> <button class ='pricitani' onClick= 'hrajici[" +
-      this.id +
-      "].pricti();'>+</button> <button  class ='pricitani' onClick = 'hrajici[" +
-      this.id +
-      " ].odecti();'>-</button><br><br>";
-  };
+    this.vypis = function () {
+      document.getElementById("tymy").innerHTML +=
+        "<span class='jmeno'>" +
+        this.name +
+        " : <span id='" +
+        this.name +
+        "'>" +
+        this.body +
+        "</span></span><br> <button class ='pricitani' onClick= 'hrajici[" +
+        this.id +
+        "].pricti();'>+</button> <button  class ='pricitani' onClick = 'hrajici[" +
+        this.id +
+        " ].odecti();'>-</button><br><br>";
+    };
+  }
 }
 
 const hrajici = [];
