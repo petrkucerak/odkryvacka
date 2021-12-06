@@ -1,0 +1,179 @@
+.onoffswitch {
+  position: relative;
+  width: 94px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 22px;
+  padding: 0;
+  line-height: 22px;
+  font-size: 15px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "Rucne";
+  padding-left: 10px;
+  background-color: #59b2cf;
+  color: #ffffff;
+}
+
+.onoffswitch-inner:after {
+  content: "Cas";
+  padding-right: 10px;
+  background-color: #59b2cf;
+  color: #ffffff;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  width: 18px;
+  margin: 2px;
+  background: #59b2cf;
+  border: 2px solid #59b2cf;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 68px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+button {
+  background-color: #59b2cf;
+  display: inline-block;
+  color: #ffffff;
+  border: 0px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #59cef2;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+.pricitani {
+  height: 20px;
+  width: 20px;
+}
+
+table,
+td,
+tr {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+body {
+  font-family: Trebuchet, Arial, sans-serif;
+}
+
+td {
+  height: 60px;
+  width: 60px;
+  background-color: #6fc4f9;
+  text-align: center;
+}
+
+table {
+  margin-left: 30px;
+}
+
+tr:first-of-type td {
+  background-color: white;
+}
+
+td:first-child {
+  background-color: white;
+}
+
+#left {
+  float: left;
+  width: 121px;
+}
+
+#uprostred {
+  float: left;
+}
+
+#obrazek {
+  position: absolute;
+  width: 693px;
+  margin-left: 93px;
+  margin-top: 63px;
+  z-index: -1;
+  height: 505px;
+}
+
+#sekund {
+  width: 20px;
+}
+
+#odhal {
+  width: 94px;
+  height: 22px;
+  margin-bottom: 6px;
+}
+
+#next {
+  float: right;
+  height: 50px;
+}
+
+.jmeno {
+  margin-bottom: 6px;
+}
+
+#podpis {
+  float: right;
+  vertical-align: bottom;
+  font-size: 9px;
+}
