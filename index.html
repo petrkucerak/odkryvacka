@@ -1,423 +1,581 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///C:/Users/pkucera/Downloads/695%20(1).html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
-	<style>
-.onoffswitch {
-    position: relative; width: 94px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
 
-.onoffswitch-checkbox {
-    display: none;
-}
+<html>
 
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-}
-
-.onoffswitch-inner {
-    width: 200%; margin-left: -100%;
-    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
-}
-
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-    float: left; width: 50%; height: 22px; padding: 0; line-height: 22px;
-    font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-
-.onoffswitch-inner:before {
-    content: "Rucne";
-    padding-left: 10px;
-    background-color: #59B2CF; color: #FFFFFF;
-}
-
-.onoffswitch-inner:after {
-    content: "Cas";
-    padding-right: 10px;
-    background-color: #59B2CF; color: #FFFFFF;
-    text-align: right;
-}
-
-.onoffswitch-switch {
-    width: 18px; margin: 2px;
-    background: #59B2CF;
-    border: 2px solid #59B2CF; border-radius: 0px;
-    position: absolute; top: 0; bottom: 0; right: 68px;
-    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
-}
-
-
-
-
-button {
-	background-color:#59b2cf;
-	display:inline-block;
-	color:#ffffff;
-	border:0px;
-	color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-	font-size: 15px
-}
-button:hover {
-	background-color:#59cef2;
-}
-button:active {
-	position:relative;
-	top:1px;
-}
-
-
-		.pricitani{
-			height: 20px;
-			width: 20px;
-		}
-
-		table, td, tr {
-			border: 1px solid white;
-			border-collapse: collapse;
-		}
-
-		body{
-			font-family: Trebuchet, Arial, sans-serif;
-		}
-
-		td{
-			height: 60px;
-			width: 60px;
-			background-color: #6fc4f9;
-			text-align: center;
-		}
-
-		table{
-			margin-left: 30px;
-		}
-
-		tr:first-of-type td{
-			background-color: white;
-		}
-
-		td:first-child{
-			background-color: white;
-		}
-
-		#left{
-			float: left;
-			width: 121px;
-
-		}
-
-		#uprostred{
-			float: left;
-		}
-
-
-		#obrazek{
-			position: absolute;
-			width: 693px;
-			margin-left: 93px;
-			margin-top: 63px;
-			z-index: -1;
-			height: 505px;
-		}
-
-		#sekund{
-			width:20px;
-		}
-		
-		#odhal{
-			width: 94px;
-			height: 22px;
-			margin-bottom: 6px;
-		}
-
-		#next{
-			float: right;
-			height: 50px;
-		}
-		.jmeno{
-			margin-bottom: 6px;
-		}
-		#podpis{
-			float: right;
-			vertical-align: bottom;
-			font-size: 9px;
-		}
-
-
-	</style>
-
-
-	<script>
-
-
-    function prebarvi(){
-    	var anchors = document.getElementsByTagName('td');
-        for(var i = 0; i < anchors.length; i++) {
-            anchors[i].style.opacity= "1.0";
-        }
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+  <style>
+    .onoffswitch {
+      position: relative;
+      width: 94px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
 
-    function odhal(){
-    	var anchors = document.getElementsByTagName('td');
-        for(var i = 0; i < anchors.length; i++) {
-            anchors[i].style.opacity= "0.0";
-        }
+    .onoffswitch-checkbox {
+      display: none;
     }
 
-    var obrazky = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg",
-    "10.jpg",
-    "11.jpg",
-    "12.jpg",
-    "13.jpg",
-    "14.jpg",
-    "15.jpg",
-    "16.jpg",
-    "17.jpg",
-    "18.jpg",
-    "19.jpg",
-    "20.jpg",
-    "21.jpg",
-    "22.jpg",
-    "23.jpg",
-    "24.jpg",
-    "25.jpg",
-    "26.jpg",
-    "27.jpg",
-    "28.jpg",
-    "29.jpg",
-	"30.jpg",
-	"31.jpg",
-	"32.jpg",
-	"33.jpg",
-	"34.jpg",
-	"35.jpg",
-	"36.jpg",
-	"37.jpg",
-	"38.jpg",
-	"39.jpg",
-	"40.jpg",
-	"41.jpg",
-	"42.jpg",
-	"43.jpg",
-	"44.jpg",
-	"45.jpg",
-	"46.jpg",
-	"47.jpg",
-	"48.jpg",
-	"49.jpg",
-	"50.jpg",
-	"51.jpg",
-	"52.jpg",
-	"53.jpg",
-	"54.jpg",
-	"55.jpg",
-	"56.jpg",
-	"57.jpg",
-	"58.jpg",
-	"59.jpg",
-	"60.jpg",
-	"61.jpg",
-	"62.jpg",
-	"63.jpg",
-	"64.jpg",
-	"65.jpg",
-	"66.jpg",
-	"67.jpg",
-	"68.jpg",
-	"69.jpg",
-	"70.jpg",
-	"71.jpg",
-	"72.jpg",
-	"73.jpg",
-	"74.jpg",
-	"75.jpg",
-	"76.jpg",
-	"77.jpg",
-	"78.jpg",
-	"79.jpg",
+    .onoffswitch-label {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+    }
 
-     ];
+    .onoffswitch-inner {
+      width: 200%;
+      margin-left: -100%;
+      -moz-transition: margin 0.3s ease-in 0s;
+      -webkit-transition: margin 0.3s ease-in 0s;
+      -o-transition: margin 0.3s ease-in 0s;
+      transition: margin 0.3s ease-in 0s;
+    }
+
+    .onoffswitch-inner:before,
+    .onoffswitch-inner:after {
+      float: left;
+      width: 50%;
+      height: 22px;
+      padding: 0;
+      line-height: 22px;
+      font-size: 15px;
+      color: white;
+      font-family: Trebuchet, Arial, sans-serif;
+      font-weight: bold;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .onoffswitch-inner:before {
+      content: "Rucne";
+      padding-left: 10px;
+      background-color: #59B2CF;
+      color: #FFFFFF;
+    }
+
+    .onoffswitch-inner:after {
+      content: "Cas";
+      padding-right: 10px;
+      background-color: #59B2CF;
+      color: #FFFFFF;
+      text-align: right;
+    }
+
+    .onoffswitch-switch {
+      width: 18px;
+      margin: 2px;
+      background: #59B2CF;
+      border: 2px solid #59B2CF;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 68px;
+      -moz-transition: all 0.3s ease-in 0s;
+      -webkit-transition: all 0.3s ease-in 0s;
+      -o-transition: all 0.3s ease-in 0s;
+      transition: all 0.3s ease-in 0s;
+    }
+
+    .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+      margin-left: 0;
+    }
+
+    .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+      right: 0px;
+    }
+
+
+
+
+    button {
+      background-color: #59b2cf;
+      display: inline-block;
+      color: #ffffff;
+      border: 0px;
+      color: white;
+      font-family: Trebuchet, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 15px
+    }
+
+    button:hover {
+      background-color: #59cef2;
+    }
+
+    button:active {
+      position: relative;
+      top: 1px;
+    }
+
+
+    .pricitani {
+      height: 20px;
+      width: 20px;
+    }
+
+    table,
+    td,
+    tr {
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+
+    body {
+      font-family: Trebuchet, Arial, sans-serif;
+    }
+
+    td {
+      height: 60px;
+      width: 60px;
+      background-color: #6fc4f9;
+      text-align: center;
+    }
+
+    table {
+      margin-left: 30px;
+    }
+
+    tr:first-of-type td {
+      background-color: white;
+    }
+
+    td:first-child {
+      background-color: white;
+    }
+
+    #left {
+      float: left;
+      width: 121px;
+
+    }
+
+    #uprostred {
+      float: left;
+    }
+
+
+    #obrazek {
+      position: absolute;
+      width: 693px;
+      margin-left: 93px;
+      margin-top: 63px;
+      z-index: -1;
+      height: 505px;
+    }
+
+    #sekund {
+      width: 20px;
+    }
+
+    #odhal {
+      width: 94px;
+      height: 22px;
+      margin-bottom: 6px;
+    }
+
+    #next {
+      float: right;
+      height: 50px;
+    }
+
+    .jmeno {
+      margin-bottom: 6px;
+    }
+
+    #podpis {
+      float: right;
+      vertical-align: bottom;
+      font-size: 9px;
+    }
+  </style>
+
+
+  <script>
+
+
+    function prebarvi() {
+      var anchors = document.getElementsByTagName('td');
+      for (var i = 0; i < anchors.length; i++) {
+        anchors[i].style.opacity = "1.0";
+      }
+    }
+
+    function odhal() {
+      var anchors = document.getElementsByTagName('td');
+      for (var i = 0; i < anchors.length; i++) {
+        anchors[i].style.opacity = "0.0";
+      }
+    }
+
+    var obrazky = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg",
+      "13.jpg",
+      "14.jpg",
+      "15.jpg",
+      "16.jpg",
+      "17.jpg",
+      "18.jpg",
+      "19.jpg",
+      "20.jpg",
+      "21.jpg",
+      "22.jpg",
+      "23.jpg",
+      "24.jpg",
+      "25.jpg",
+      "26.jpg",
+      "27.jpg",
+      "28.jpg",
+      "29.jpg",
+      "30.jpg",
+      "31.jpg",
+      "32.jpg",
+      "33.jpg",
+      "34.jpg",
+      "35.jpg",
+      "36.jpg",
+      "37.jpg",
+      "38.jpg",
+      "39.jpg",
+      "40.jpg",
+      "41.jpg",
+      "42.jpg",
+      "43.jpg",
+      "44.jpg",
+      "45.jpg",
+      "46.jpg",
+      "47.jpg",
+      "48.jpg",
+      "49.jpg",
+      "50.jpg",
+      "51.jpg",
+      "52.jpg",
+      "53.jpg",
+      "54.jpg",
+      "55.jpg",
+      "56.jpg",
+      "57.jpg",
+      "58.jpg",
+      "59.jpg",
+      "60.jpg",
+      "61.jpg",
+      "62.jpg",
+      "63.jpg",
+      "64.jpg",
+      "65.jpg",
+      "66.jpg",
+      "67.jpg",
+      "68.jpg",
+      "69.jpg",
+      "70.jpg",
+      "71.jpg",
+      "72.jpg",
+      "73.jpg",
+      "74.jpg",
+      "75.jpg",
+      "76.jpg",
+      "77.jpg",
+      "78.jpg",
+      "79.jpg",
+
+    ];
     var pozice = 0
 
-    function next(){
-    	pozice++;
-    	document['obr'].src= obrazky[pozice];
-    	obnovaBunek();
-    	if (stav){
-    		stav = false;
-    		setTimeout("stav = true;odhaluj();", parseInt(document.getElementById("sekund").value)*1000 + 100);
-		}
+    function next() {
+      pozice++;
+      document['obr'].src = obrazky[pozice];
+      obnovaBunek();
+      if (stav) {
+        stav = false;
+        setTimeout("stav = true;odhaluj();", parseInt(document.getElementById("sekund").value) * 1000 + 100);
+      }
     }
 
-	function Tym (jmeno,i){
-    	this.name = jmeno;
-    	this.body = 0;
-    	this.id = i;
+    function Tym(jmeno, i) {
+      this.name = jmeno;
+      this.body = 0;
+      this.id = i;
 
-    	this.pricti = function (){
-    		this.body ++;
-    		document.getElementById(this.name).innerHTML = this.body;
-    	}
+      this.pricti = function () {
+        this.body++;
+        document.getElementById(this.name).innerHTML = this.body;
+      }
 
-    	this.odecti = function (){
-    		this.body --;
-    		document.getElementById(this.name).innerHTML = this.body;
-    	}
+      this.odecti = function () {
+        this.body--;
+        document.getElementById(this.name).innerHTML = this.body;
+      }
 
-    	this.vypis = function(){
-    		document.getElementById("tymy").innerHTML += "<span class = jmeno>" + this.name + " : <span id=" + this.name + ">" + this.body + "</span></span><br> <button class ='pricitani' onClick= 'hrajici[" + this.id + "].pricti();'>+</button> <button  class ='pricitani' onClick = 'hrajici[" + this.id + " ].odecti();'>-</button><br><br>";
-    	}
+      this.vypis = function () {
+        document.getElementById("tymy").innerHTML += "<span class = jmeno>" + this.name + " : <span id=" + this.name + ">" + this.body + "</span></span><br> <button class ='pricitani' onClick= 'hrajici[" + this.id + "].pricti();'>+</button> <button  class ='pricitani' onClick = 'hrajici[" + this.id + " ].odecti();'>-</button><br><br>";
+      }
 
 
     }
 
-    var hrajici =[];
-	
-    window.onload = function() {
-				var tabulka	= document.getElementById("tabulka");
-				var trs		= tabulka.getElementsByTagName("tr");
-				for(var a=0;a<trs.length;a++) {
-					var tr = trs[a];
-					if(a>0) {
-						var tds = tr.getElementsByTagName("td");
-						for(var b=0;b<tds.length;b++) {
-							var td = tds[b];
-							if(b>0) {
-								var f = function(a,b,color) {
-									return function() {
-										var col = document.getElementById("tabulka").getElementsByTagName("tr")[0].getElementsByTagName("td")[b];
-											col.style.background = color;
-										var row = document.getElementById("tabulka").getElementsByTagName("tr")[a].getElementsByTagName("td")[0];										
-											row.style.background = color;										
-									}
-								}	
-								td.onmouseover = f(a,b,"#dcdcdc");
-								td.onmouseout = f(a,b,"white");
-							}	
-						}	
-					}	
-				}
+    var hrajici = [];
 
-				var anchors = document.getElementsByTagName('td');
-        		for(var i = 0; i < anchors.length; i++) {
-           			 var anchor = anchors[i];
-            		anchor.onclick = function() {
-            			this.style.opacity = "0.0";
-            			var iden = this.id;
-            			for(i=0;i<bunky.length;i++){
-            				if (bunky[i] == iden){
-            					bunky.splice(i,1);
-            				}
-            			}
-            		}
-       			}
-       			
-       			var pocet = parseInt(prompt("Kolik chcete tymu?"));
+    window.onload = function () {
+      var tabulka = document.getElementById("tabulka");
+      var trs = tabulka.getElementsByTagName("tr");
+      for (var a = 0; a < trs.length; a++) {
+        var tr = trs[a];
+        if (a > 0) {
+          var tds = tr.getElementsByTagName("td");
+          for (var b = 0; b < tds.length; b++) {
+            var td = tds[b];
+            if (b > 0) {
+              var f = function (a, b, color) {
+                return function () {
+                  var col = document.getElementById("tabulka").getElementsByTagName("tr")[0].getElementsByTagName("td")[b];
+                  col.style.background = color;
+                  var row = document.getElementById("tabulka").getElementsByTagName("tr")[a].getElementsByTagName("td")[0];
+                  row.style.background = color;
+                }
+              }
+              td.onmouseover = f(a, b, "#dcdcdc");
+              td.onmouseout = f(a, b, "white");
+            }
+          }
+        }
+      }
 
-       			for (i=0;i<pocet;i++){
-       				var cislo = i+1;
-       				var jmeno = prompt("Jake je jmeno tymu " + cislo +"?");
-       				hrajici[i] = new Tym(jmeno,i);
-       				hrajici[i].vypis();
+      var anchors = document.getElementsByTagName('td');
+      for (var i = 0; i < anchors.length; i++) {
+        var anchor = anchors[i];
+        anchor.onclick = function () {
+          this.style.opacity = "0.0";
+          var iden = this.id;
+          for (i = 0; i < bunky.length; i++) {
+            if (bunky[i] == iden) {
+              bunky.splice(i, 1);
+            }
+          }
+        }
+      }
 
-       			}
-	}
+      var pocet = parseInt(prompt("Kolik chcete tymu?"));
 
-	var stav = false;
-	var klik = 1;
-	var bunky = ["A","B","C","D","E","F","G","H","CH","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","BB","CC","DD","EE","GG","FF","HH","CHCH","II","JJ","KK","LL","MM","NN","OO","PP","QQ","RR","SS","TT","UU","VV","WW","XX","YY","ZZ","AAA","BBB","CCC","DDD","EEE","FFF","GGG","HHH","CHCHCH","III","JJJ","KKK","LLL","MMM","NNN","OOO","PPP","QQQ","RRR","SSS","TTT","UUU","VVV","WWW","XXX","YYY","ZZZ","AAAA","BBBB","CCCC","DDDD","EEEE","FFFF","GGGG"];
+      for (i = 0; i < pocet; i++) {
+        var cislo = i + 1;
+        var jmeno = prompt("Jake je jmeno tymu " + cislo + "?");
+        hrajici[i] = new Tym(jmeno, i);
+        hrajici[i].vypis();
 
-	function obnovaBunek(){
-		bunky = ["A","B","C","D","E","F","G","H","CH","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","BB","CC","DD","EE","GG","FF","HH","CHCH","II","JJ","KK","LL","MM","NN","OO","PP","QQ","RR","SS","TT","UU","VV","WW","XX","YY","ZZ","AAA","BBB","CCC","DDD","EEE","FFF","GGG","HHH","CHCHCH","III","JJJ","KKK","LLL","MMM","NNN","OOO","PPP","QQQ","RRR","SSS","TTT","UUU","VVV","WWW","XXX","YYY","ZZZ","AAAA","BBBB","CCCC","DDDD","EEEE","FFFF","GGGG"];
-	}
+      }
+    }
 
-	function zmena(){
-		klik += 1/2;
-		if(klik % 2 == 0){
-			stav = true;
-			odhaluj();
-		}
-		else{
-			stav = false;
-		}
-	}
+    var stav = false;
+    var klik = 1;
+    var bunky = ["A", "B", "C", "D", "E", "F", "G", "H", "CH", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "BB", "CC", "DD", "EE", "GG", "FF", "HH", "CHCH", "II", "JJ", "KK", "LL", "MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ", "AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "HHH", "CHCHCH", "III", "JJJ", "KKK", "LLL", "MMM", "NNN", "OOO", "PPP", "QQQ", "RRR", "SSS", "TTT", "UUU", "VVV", "WWW", "XXX", "YYY", "ZZZ", "AAAA", "BBBB", "CCCC", "DDDD", "EEEE", "FFFF", "GGGG"];
 
-	function odhaluj(){
-		if (stav){
-			if (bunky.length > 0){
-				var delka = bunky.length;
-				var nahoda = Math.floor(Math.random()*delka);
-				document.getElementById(bunky[nahoda]).style.opacity = "0.0";
-				bunky.splice(nahoda,1);
-				setTimeout("odhaluj()", parseInt(document.getElementById("sekund").value)*1000);
-			}
-			else{
-				odhal();
-				obnovaBunek();
-			}
-		}		
-	}
+    function obnovaBunek() {
+      bunky = ["A", "B", "C", "D", "E", "F", "G", "H", "CH", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "BB", "CC", "DD", "EE", "GG", "FF", "HH", "CHCH", "II", "JJ", "KK", "LL", "MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ", "AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "HHH", "CHCHCH", "III", "JJJ", "KKK", "LLL", "MMM", "NNN", "OOO", "PPP", "QQQ", "RRR", "SSS", "TTT", "UUU", "VVV", "WWW", "XXX", "YYY", "ZZZ", "AAAA", "BBBB", "CCCC", "DDDD", "EEEE", "FFFF", "GGGG"];
+    }
 
-	</script>
+    function zmena() {
+      klik += 1 / 2;
+      if (klik % 2 == 0) {
+        stav = true;
+        odhaluj();
+      }
+      else {
+        stav = false;
+      }
+    }
 
-<title>Co je to?</title></head>
+    function odhaluj() {
+      if (stav) {
+        if (bunky.length > 0) {
+          var delka = bunky.length;
+          var nahoda = Math.floor(Math.random() * delka);
+          document.getElementById(bunky[nahoda]).style.opacity = "0.0";
+          bunky.splice(nahoda, 1);
+          setTimeout("odhaluj()", parseInt(document.getElementById("sekund").value) * 1000);
+        }
+        else {
+          odhal();
+          obnovaBunek();
+        }
+      }
+    }
+
+  </script>
+
+  <title>Co je to?</title>
+</head>
 
 <body>
-	<div id="left">
-		<div id="tymy">
-		<b>Body</b>
-		<br>
-		</div>
-		<br>
-		<button onclick="prebarvi();next();" id="next">&gt;</button>
-		<button onclick="odhal()" id="odhal">Odhal</button>
+  <div id="left">
+    <div id="tymy">
+      <b>Body</b>
+      <br>
+    </div>
+    <br>
+    <button onclick="prebarvi();next();" id="next">&gt;</button>
+    <button onclick="odhal()" id="odhal">Odhal</button>
 
 
-	<div class="onoffswitch" onclick="zmena();">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked="">
-    <label class="onoffswitch-label" for="myonoffswitch">
+    <div class="onoffswitch" onclick="zmena();">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked="">
+      <label class="onoffswitch-label" for="myonoffswitch">
         <div class="onoffswitch-inner"></div>
         <div class="onoffswitch-switch"></div>
-    </label>	
-	</div>
-	<input type="box" id="sekund" value="1"> sekund
+      </label>
+    </div>
+    <input type="box" id="sekund" value="1"> sekund
 
 
-	</div>
-		<img src="/1.jpg" id="obrazek" name="obr">
-<div id="uprostred">
+  </div>
+  <img src="/1.jpg" id="obrazek" name="obr">
+  <div id="uprostred">
 
-	<table id="tabulka">
-			<tbody><tr> <td></td> <td>A</td> <td>B</td> <td>C</td> <td>D</td> <td>E</td> <td>F</td> <td>G</td> <td>H</td> <td>CH</td> <td style="background: rgb(220, 220, 220);">I</td> <td>J</td></tr>
-			<tr> <td>1</td> <td id="A"></td> <td id="B"></td> <td id="C"></td> <td id="D"></td> <td id="E"></td> <td id="F"></td> <td id="G"></td> <td id="H"></td>  <td id="CH"></td> <td id="I"></td> <td id="J"></td></tr>
-			<tr> <td>2</td> <td id="K"></td> <td id="L"></td> <td id="M"></td> <td id="O"></td> <td id="P"></td> <td id="Q"></td> <td id="R"></td> <td id="S"></td>  <td id="T"></td> <td id="U"></td>  <td id="V"></td></tr>
-			<tr> <td>3</td> <td id="W"></td> <td id="X"></td> <td id="Y"></td> <td id="Z"></td> <td id="AA"></td> <td id="BB"></td> <td id="CC"></td> <td id="DD"></td>  <td id="EE"></td> <td id="FF"></td> <td id="GG"></td> </tr>
-			<tr> <td>4</td> <td id="HH"></td> <td id="CHCH"></td> <td id="II"></td> <td id="JJ"></td> <td id="KK"></td> <td id="LL"></td> <td id="MM"></td> <td id="NN"></td>  <td id="OO"></td> <td id="PP"></td>  <td id="QQ"></td></tr>
-			<tr> <td style="background: rgb(220, 220, 220);">5</td> <td id="RR"></td> <td id="SS"></td> <td id="TT"></td> <td id="UU"></td> <td id="VV"></td> <td id="WW"></td> <td id="XX"></td> <td id="YY"></td>  <td id="ZZ"></td> <td id="AAA"></td> <td id="BBB"></td> </tr>
-			<tr> <td>6</td> <td id="CCC"></td> <td id="DDD"></td> <td id="EEE"></td> <td id="FFF"></td> <td id="GGG"></td> <td id="HHH"></td> <td id="CHCHCH"></td> <td id="III"></td>  <td id="JJJ"></td> <td id="KKK"></td>  <td id="LLL"></td></tr>
-			<tr> <td>7</td> <td id="MMM"></td> <td id="NNN"></td> <td id="OOO"></td> <td id="PPP"></td> <td id="QQQ"></td> <td id="RRR"></td> <td id="SSS"></td> <td id="TTT"></td>  <td id="UUU"></td> <td id="VVV"></td> <td id="WWW"></td> </tr>
-			<tr> <td>8</td> <td id="XXX"></td> <td id="YYY"></td> <td id="ZZZ"></td> <td id="AAAA"></td> <td id="BBBB"></td> <td id="CCCC"></td> <td id="DDDD"></td> <td id="EEEE"></td>  <td id="FFFF"></td> <td id="GGGG"></td> <td id="N"></td> </tr>
-		</tbody></table>
+    <table id="tabulka">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+          <td>E</td>
+          <td>F</td>
+          <td>G</td>
+          <td>H</td>
+          <td>CH</td>
+          <td style="background: rgb(220, 220, 220);">I</td>
+          <td>J</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td id="A"></td>
+          <td id="B"></td>
+          <td id="C"></td>
+          <td id="D"></td>
+          <td id="E"></td>
+          <td id="F"></td>
+          <td id="G"></td>
+          <td id="H"></td>
+          <td id="CH"></td>
+          <td id="I"></td>
+          <td id="J"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td id="K"></td>
+          <td id="L"></td>
+          <td id="M"></td>
+          <td id="O"></td>
+          <td id="P"></td>
+          <td id="Q"></td>
+          <td id="R"></td>
+          <td id="S"></td>
+          <td id="T"></td>
+          <td id="U"></td>
+          <td id="V"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="W"></td>
+          <td id="X"></td>
+          <td id="Y"></td>
+          <td id="Z"></td>
+          <td id="AA"></td>
+          <td id="BB"></td>
+          <td id="CC"></td>
+          <td id="DD"></td>
+          <td id="EE"></td>
+          <td id="FF"></td>
+          <td id="GG"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="HH"></td>
+          <td id="CHCH"></td>
+          <td id="II"></td>
+          <td id="JJ"></td>
+          <td id="KK"></td>
+          <td id="LL"></td>
+          <td id="MM"></td>
+          <td id="NN"></td>
+          <td id="OO"></td>
+          <td id="PP"></td>
+          <td id="QQ"></td>
+        </tr>
+        <tr>
+          <td style="background: rgb(220, 220, 220);">5</td>
+          <td id="RR"></td>
+          <td id="SS"></td>
+          <td id="TT"></td>
+          <td id="UU"></td>
+          <td id="VV"></td>
+          <td id="WW"></td>
+          <td id="XX"></td>
+          <td id="YY"></td>
+          <td id="ZZ"></td>
+          <td id="AAA"></td>
+          <td id="BBB"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td id="CCC"></td>
+          <td id="DDD"></td>
+          <td id="EEE"></td>
+          <td id="FFF"></td>
+          <td id="GGG"></td>
+          <td id="HHH"></td>
+          <td id="CHCHCH"></td>
+          <td id="III"></td>
+          <td id="JJJ"></td>
+          <td id="KKK"></td>
+          <td id="LLL"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td id="MMM"></td>
+          <td id="NNN"></td>
+          <td id="OOO"></td>
+          <td id="PPP"></td>
+          <td id="QQQ"></td>
+          <td id="RRR"></td>
+          <td id="SSS"></td>
+          <td id="TTT"></td>
+          <td id="UUU"></td>
+          <td id="VVV"></td>
+          <td id="WWW"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td id="XXX"></td>
+          <td id="YYY"></td>
+          <td id="ZZZ"></td>
+          <td id="AAAA"></td>
+          <td id="BBBB"></td>
+          <td id="CCCC"></td>
+          <td id="DDDD"></td>
+          <td id="EEEE"></td>
+          <td id="FFFF"></td>
+          <td id="GGGG"></td>
+          <td id="N"></td>
+        </tr>
+      </tbody>
+    </table>
 
-	<div id="podpis">
-		2013 <a href="mailto:skokan.votruba@gmail.com">Skokan</a> | 2021 <a href="mailto:petr@khome.cz">Bolndynka</a>
-	</div>
-	</div>
+    <div id="podpis">
+      2013 <a href="mailto:skokan.votruba@gmail.com">Skokan</a> | 2021 <a href="mailto:petr@khome.cz">Bolndynka</a>
+    </div>
+  </div>
 
 
 
 
-		
 
 
-</body></html>
+
+</body>
+
+</html>
