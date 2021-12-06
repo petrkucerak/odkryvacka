@@ -1,12 +1,12 @@
+const anchors = document.getElementsByTagName("td");
+
 function prebarvi() {
-  var anchors = document.getElementsByTagName("td");
   for (var i = 0; i < anchors.length; i++) {
     anchors[i].style.opacity = "1.0";
   }
 }
 
 function odhal() {
-  var anchors = document.getElementsByTagName("td");
   for (var i = 0; i < anchors.length; i++) {
     anchors[i].style.opacity = "0.0";
   }
@@ -93,7 +93,7 @@ var obrazky = [
   "78.jpg",
   "79.jpg",
 ];
-var pozice = 0;
+let pozice = 0;
 
 function next() {
   pozice++;
@@ -139,29 +139,28 @@ function Tym(jmeno, i) {
   };
 }
 
-var hrajici = [];
+const hrajici = [];
 
-window.onload = function () {
-  var tabulka = document.getElementById("tabulka");
-  var trs = tabulka.getElementsByTagName("tr");
-  for (var a = 0; a < trs.length; a++) {
-    var tr = trs[a];
+window.onload = () => {
+  const tabulka = document.getElementById("tabulka");
+  const trs = tabulka.getElementsByTagName("tr");
+  for (let a = 0; a < trs.length; a++) {
+    const tr = trs[a];
     if (a > 0) {
-      var tds = tr.getElementsByTagName("td");
+      const tds = tr.getElementsByTagName("td");
       for (var b = 0; b < tds.length; b++) {
         var td = tds[b];
         if (b > 0) {
           var f = function (a, b, color) {
-            return function () {
-              var col = document
+            return () => {
+              const col = document
                 .getElementById("tabulka")
                 .getElementsByTagName("tr")[0]
                 .getElementsByTagName("td")[b];
               col.style.background = color;
               var row = document
                 .getElementById("tabulka")
-                .getElementsByTagName("tr")
-                [a].getElementsByTagName("td")[0];
+                .getElementsByTagName("tr")[a].getElementsByTagName("td")[0];
               row.style.background = color;
             };
           };
@@ -172,9 +171,8 @@ window.onload = function () {
     }
   }
 
-  var anchors = document.getElementsByTagName("td");
   for (var i = 0; i < anchors.length; i++) {
-    var anchor = anchors[i];
+    const anchor = anchors[i];
     anchor.onclick = function () {
       this.style.opacity = "0.0";
       var iden = this.id;
@@ -186,7 +184,7 @@ window.onload = function () {
     };
   }
 
-  var pocet = parseInt(prompt("Kolik chcete tymu?"));
+  const pocet = parseInt(prompt("Kolik chcete tymu?"));
 
   for (i = 0; i < pocet; i++) {
     var cislo = i + 1;
