@@ -12,4 +12,4 @@ Hra je vytvořená jako webová stránka, kterou si zde můžete stáhnout. Obr�
 Pokud refreshnete stránku, přijdete o dosavadní herní progress, protože stránka funguje pouze v js prohlížeče.
 
 ## Autor
-Původně kód přejat z webové stránky: https://www.hranostaj.cz/hra3679
+Původně kód přejat z webové stránky: https://www.hranostaj.cz/hra3679 jehož autorem je Skokan (Martin Votruba) - skokan.votruba@gmail.com
