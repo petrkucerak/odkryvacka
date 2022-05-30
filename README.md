@@ -2,6 +2,8 @@
 
 Hra na motivy televizních soutěží, kdy se odkrývá obrázek, kdo ho první pozná, vyhrál. Je potřeba promítačka/počítač.
 
+Demo: https://odkryvacka.petrkucerak.cz/
+
 
 ## Pravidla
 
