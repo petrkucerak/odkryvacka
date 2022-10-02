@@ -2,8 +2,20 @@
 
 Hra na motivy televizních soutěží, kdy se odkrývá obrázek, kdo ho první pozná, vyhrál. Je potřeba promítačka/počítač.
 
-Demo: https://odkryvacka.petrkucerak.cz/
 
+The game is simply based on guessing the image while uncovering rectangular parts.
+
+
+## Setup
+
+Simply add images starting with `1.png` to `x.png` to the img folder and run the quiz. The sequence must be 
+correct, otherwise the game fails to load an image and says the game has ended.
+
+
+## Original code + readme:
+
+
+Demo (outdated): https://odkryvacka.petrkucerak.cz/
 
 ## Pravidla
 

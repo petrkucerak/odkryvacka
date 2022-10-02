@@ -7,157 +7,28 @@
 </head>
 <body>
   <script src="main.js"></script>
-  <div id="left">
-    <div id="tymy">
-      <b>Body</b>
+  <div id="container">
+    <div id="left">
+      <div id="tymy">
+        <b>Body</b>
+        <br>
+      </div>
       <br>
+      <button onclick="prebarvi();next();" id="next">&gt;</button>
+      <button onclick="odhal()" id="odhal">Odhal</button>
+      <div class="onoffswitch" onclick="zmena();">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked="">
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <div class="onoffswitch-inner"></div>
+          <div class="onoffswitch-switch"></div>
+        </label>
+      </div>
+      <input type="box" id="sekund" value="1"> sekund
     </div>
-    <br>
-    <button onclick="prebarvi();next();" id="next">&gt;</button>
-    <button onclick="odhal()" id="odhal">Odhal</button>
-    <div class="onoffswitch" onclick="zmena();">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked="">
-      <label class="onoffswitch-label" for="myonoffswitch">
-        <div class="onoffswitch-inner"></div>
-        <div class="onoffswitch-switch"></div>
-      </label>
-    </div>
-    <input type="box" id="sekund" value="1"> sekund
-  </div>
-  <img src="img/1.jpg" id="obrazek" name="obr">
-  <div id="uprostred">
-    <table id="tabulka">
-      <tbody>
-        <tr>
-          <td></td>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
-          <td>D</td>
-          <td>E</td>
-          <td>F</td>
-          <td>G</td>
-          <td>H</td>
-          <td>CH</td>
-          <td style="background: rgb(220, 220, 220);">I</td>
-          <td>J</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td id="A"></td>
-          <td id="B"></td>
-          <td id="C"></td>
-          <td id="D"></td>
-          <td id="E"></td>
-          <td id="F"></td>
-          <td id="G"></td>
-          <td id="H"></td>
-          <td id="CH"></td>
-          <td id="I"></td>
-          <td id="J"></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td id="K"></td>
-          <td id="L"></td>
-          <td id="M"></td>
-          <td id="O"></td>
-          <td id="P"></td>
-          <td id="Q"></td>
-          <td id="R"></td>
-          <td id="S"></td>
-          <td id="T"></td>
-          <td id="U"></td>
-          <td id="V"></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td id="W"></td>
-          <td id="X"></td>
-          <td id="Y"></td>
-          <td id="Z"></td>
-          <td id="AA"></td>
-          <td id="BB"></td>
-          <td id="CC"></td>
-          <td id="DD"></td>
-          <td id="EE"></td>
-          <td id="FF"></td>
-          <td id="GG"></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td id="HH"></td>
-          <td id="CHCH"></td>
-          <td id="II"></td>
-          <td id="JJ"></td>
-          <td id="KK"></td>
-          <td id="LL"></td>
-          <td id="MM"></td>
-          <td id="NN"></td>
-          <td id="OO"></td>
-          <td id="PP"></td>
-          <td id="QQ"></td>
-        </tr>
-        <tr>
-          <td style="background: rgb(220, 220, 220);">5</td>
-          <td id="RR"></td>
-          <td id="SS"></td>
-          <td id="TT"></td>
-          <td id="UU"></td>
-          <td id="VV"></td>
-          <td id="WW"></td>
-          <td id="XX"></td>
-          <td id="YY"></td>
-          <td id="ZZ"></td>
-          <td id="AAA"></td>
-          <td id="BBB"></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td id="CCC"></td>
-          <td id="DDD"></td>
-          <td id="EEE"></td>
-          <td id="FFF"></td>
-          <td id="GGG"></td>
-          <td id="HHH"></td>
-          <td id="CHCHCH"></td>
-          <td id="III"></td>
-          <td id="JJJ"></td>
-          <td id="KKK"></td>
-          <td id="LLL"></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td id="MMM"></td>
-          <td id="NNN"></td>
-          <td id="OOO"></td>
-          <td id="PPP"></td>
-          <td id="QQQ"></td>
-          <td id="RRR"></td>
-          <td id="SSS"></td>
-          <td id="TTT"></td>
-          <td id="UUU"></td>
-          <td id="VVV"></td>
-          <td id="WWW"></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td id="XXX"></td>
-          <td id="YYY"></td>
-          <td id="ZZZ"></td>
-          <td id="AAAA"></td>
-          <td id="BBBB"></td>
-          <td id="CCCC"></td>
-          <td id="DDDD"></td>
-          <td id="EEEE"></td>
-          <td id="FFFF"></td>
-          <td id="GGGG"></td>
-          <td id="N"></td>
-        </tr>
-      </tbody>
-    </table>
-    <div id="podpis">
-      <a href="mailto:skokan.votruba@gmail.com">Skokan</a> & <a href="https://github.com/petrkucerak/odkryvacka/">contributors</a>
+    <div id="uprostred">
+      <img src="undefined" id="obrazek" name="obr">
+      <table id="tabulka">
+      </table>
     </div>
   </div>
 </body>

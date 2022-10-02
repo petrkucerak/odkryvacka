@@ -117,8 +117,6 @@ body {
 }
 
 td {
-  height: 60px;
-  width: 60px;
   background-color: #6fc4f9;
   text-align: center;
 }
@@ -136,21 +134,15 @@ td:first-child {
 }
 
 #left {
-  float: left;
   width: 121px;
 }
-
-#uprostred {
-  float: left;
+#container {
+  flex-direction: row;
+  display: flex;
 }
-
 #obrazek {
   position: absolute;
-  width: 693px;
-  margin-left: 93px;
-  margin-top: 63px;
   z-index: -1;
-  height: 505px;
 }
 
 #sekund {
