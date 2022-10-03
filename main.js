@@ -171,6 +171,9 @@ function refresh(img) {
     "Y",
     "Z",
   ];
+  
+  const widthSegments =  Math.ceil((w*0.98) / bestFit);
+  const heightSegments = Math.ceil((h*0.98) / bestFit);
 
   const tr = document.createElement("tr");
   { //left top corner
@@ -180,7 +183,7 @@ function refresh(img) {
     tr.appendChild(td);
   }
 
-  for (let column = 0; column < w / bestFit - 1; column++) {
+  for (let column = 0; column < widthSegments; column++) {    
     const td = document.createElement("td");
     td.style.width = `${bestFit}px`;
     td.style.height = `${bestFit}px`;
@@ -190,7 +193,8 @@ function refresh(img) {
 
   tabulka.appendChild(tr);
 
-  for (let row = 0; row < h / bestFit - 1; row++) {
+  for (let row = 0; row < heightSegments; row++) {
+
     const tr = document.createElement("tr");
 
     {
@@ -201,7 +205,8 @@ function refresh(img) {
       tr.appendChild(td);
     }
 
-   for (let column = 0; column < w / bestFit - 1; column++) {
+   for (let column = 0; column <widthSegments; column++) {
+        
       const td = document.createElement("td");
       var focus = function (a, b, color) {
         return () => {
